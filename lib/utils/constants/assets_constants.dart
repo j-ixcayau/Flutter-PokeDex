@@ -1,3 +1,7 @@
 class AssetsConstants {
-  static const loader = 'assets/loader/loader.json';
+  static const loaderLottie = 'assets/loader/loader.json';
+
+  // Auth
+  static const facebookLogo = 'assets/auth/ic_facebook_logo.png';
+  static const googleLogo = 'assets/auth/ic_google_logo.png';
 }

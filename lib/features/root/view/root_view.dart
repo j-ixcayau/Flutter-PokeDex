@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex/features/root/view/root_layout.dart';
 import 'package:pokedex/features/root/view_model/root_view_model.dart';
+import 'package:pokedex/main/di.dart';
 import 'package:provider/provider.dart';
 
 class RootView extends StatelessWidget {
@@ -9,7 +10,7 @@ class RootView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => RootViewModel(),
+      create: (context) => AppDI.instance.get<RootViewModel>(),
       child: const Scaffold(
         body: RootLayout(),
       ),
