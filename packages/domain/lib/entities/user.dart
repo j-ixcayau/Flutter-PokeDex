@@ -4,4 +4,9 @@ class User {
   User({
     required this.email,
   });
+
+  @override
+  String toString() {
+    return 'email:$email';
+  }
 }

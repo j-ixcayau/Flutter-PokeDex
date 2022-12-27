@@ -6,4 +6,9 @@ class LoginResponse {
   });
 
   final User user;
+
+  @override
+  String toString() {
+    return user.toString();
+  }
 }

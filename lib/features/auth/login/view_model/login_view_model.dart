@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:domain/network/auth/login/login_request.dart';
 import 'package:domain/repositories/auth/login_repository.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pokedex/utils/routes/route_keys.dart';
 
 class LoginViewModel extends ChangeNotifier {
   LoginViewModel({
@@ -35,5 +36,9 @@ class LoginViewModel extends ChangeNotifier {
         log(r.toString());
       },
     );
+  }
+
+  void navigateToRegister(BuildContext context) {
+    Navigator.pushNamed(context, RouteKeys.register);
   }
 }
