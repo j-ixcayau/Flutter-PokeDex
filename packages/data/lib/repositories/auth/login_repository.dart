@@ -8,15 +8,15 @@ import 'package:domain/repositories/auth/login_repository.dart';
 
 class LoginRepositoryImpl extends LoginRepository {
   LoginRepositoryImpl({
-    required LoginDatasource datasource,
-  }) : _datasource = datasource;
+    required LoginDatasource dataSource,
+  }) : _dataSource = dataSource;
 
-  final LoginDatasource _datasource;
+  final LoginDatasource _dataSource;
 
   @override
   Future<Either<Exception, LoginResponse>> login(LoginRequest request) async {
     try {
-      final result = await _datasource.login(request);
+      final result = await _dataSource.login(request);
 
       return Right(result);
     } on Exception catch (e) {

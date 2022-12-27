@@ -8,17 +8,17 @@ import 'package:domain/repositories/auth/register_repository.dart';
 
 class RegisterRepositoryImpl extends RegisterRepository {
   RegisterRepositoryImpl({
-    required RegisterDataSource datasource,
-  }) : _datasource = datasource;
+    required RegisterDataSource dataSource,
+  }) : _dataSource = dataSource;
 
-  final RegisterDataSource _datasource;
+  final RegisterDataSource _dataSource;
 
   @override
   Future<Either<Exception, RegisterResponse>> register(
     RegisterRequest request,
   ) async {
     try {
-      final result = await _datasource.register(request);
+      final result = await _dataSource.register(request);
 
       return Right(result);
     } on Exception catch (e) {

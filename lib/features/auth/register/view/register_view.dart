@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/features/auth/login/view/login_layout.dart';
-import 'package:pokedex/features/auth/login/view_model/login_view_model.dart';
 import 'package:pokedex/features/auth/register/view/register_layout.dart';
 import 'package:pokedex/features/auth/register/view_model/register_view_model.dart';
 import 'package:pokedex/main/di.dart';

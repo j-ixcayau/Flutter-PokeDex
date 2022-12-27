@@ -7,6 +7,6 @@ class User {
 
   @override
   String toString() {
-    return 'email:$email';
+    return 'User(email: $email)';
   }
 }

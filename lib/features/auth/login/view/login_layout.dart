@@ -65,7 +65,7 @@ class LoginLayout extends StatelessWidget {
               const SizedBox(width: AppSpaces.m),
               SocialButton(
                 assetPath: AssetsConstants.googleLogo,
-                onTap: () {},
+                onTap: () => context.read<LoginViewModel>().googleAuth(context),
               ),
             ],
           ),

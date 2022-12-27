@@ -5,7 +5,7 @@ import 'package:lottie/lottie.dart';
 import 'package:pokedex/utils/constants/assets_constants.dart';
 import 'package:provider/provider.dart';
 
-import '../view_model/root_view_model.dart';
+import 'package:pokedex/features/root/view_model/root_view_model.dart';
 
 class RootLayout extends StatefulWidget {
   const RootLayout({super.key});
