@@ -1,15 +1,16 @@
 import 'dart:developer';
 
 import 'package:domain/network/auth/register/register_request.dart';
-import 'package:domain/repositories/auth/register_repository.dart';
+import 'package:domain/repositories/auth/auth_repository.dart';
+
 import 'package:flutter/widgets.dart';
 
 class RegisterViewModel extends ChangeNotifier {
   RegisterViewModel({
-    required RegisterRepository repository,
+    required AuthRepository repository,
   }) : _repository = repository;
 
-  final RegisterRepository _repository;
+  final AuthRepository _repository;
 
   final formKey = GlobalKey<FormState>();
 

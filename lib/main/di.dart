@@ -1,11 +1,11 @@
-import 'package:data/data_sources/auth/login_data_source.dart';
-import 'package:data/data_sources/auth/register_data_source.dart';
+import 'package:data/data_sources/auth/auth_data_source.dart';
+
 import 'package:data/data_sources/auth/social_auth_data_source.dart';
-import 'package:data/repositories/auth/login_repository.dart';
-import 'package:data/repositories/auth/register_repository.dart';
+import 'package:data/repositories/auth/auth_repository.dart';
+
 import 'package:data/repositories/auth/social_auth_repository.dart';
-import 'package:domain/repositories/auth/login_repository.dart';
-import 'package:domain/repositories/auth/register_repository.dart';
+import 'package:domain/repositories/auth/auth_repository.dart';
+
 import 'package:domain/repositories/auth/social_auth_repository.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pokedex/features/auth/login/view_model/login_view_model.dart';
@@ -23,22 +23,12 @@ class AppDI {
   }
 
   static void _configRepositories() {
-    _getIt.registerLazySingleton<LoginDatasource>(
-      () => LoginDatasourceImpl(),
+    _getIt.registerLazySingleton<AuthDataSource>(
+      () => AuthDataSourceImpl(),
     );
 
-    _getIt.registerLazySingleton<LoginRepository>(
-      () => LoginRepositoryImpl(
-        dataSource: _getIt(),
-      ),
-    );
-
-    _getIt.registerLazySingleton<RegisterDataSource>(
-      () => RegisterDataSourceImpl(),
-    );
-
-    _getIt.registerLazySingleton<RegisterRepository>(
-      () => RegisterRepositoryImpl(
+    _getIt.registerLazySingleton<AuthRepository>(
+      () => AuthRepositoryImpl(
         dataSource: _getIt(),
       ),
     );
@@ -56,7 +46,9 @@ class AppDI {
 
   static void _configViewModels() {
     _getIt.registerFactory<RootViewModel>(
-      () => RootViewModel(),
+      () => RootViewModel(
+        repository: _getIt(),
+      ),
     );
 
     _getIt.registerFactory<LoginViewModel>(
