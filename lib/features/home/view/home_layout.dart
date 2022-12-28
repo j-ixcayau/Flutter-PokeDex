@@ -36,7 +36,7 @@ class HomeLayout extends StatelessWidget {
             HomeCategoryCard(
               title: 'Cerrar sesión',
               color: PokeColors.logOutCard,
-              onTap: () {},
+              onTap: () => context.read<HomeViewModel>().logout(context),
             ),
             const Spacer(flex: 1),
           ],

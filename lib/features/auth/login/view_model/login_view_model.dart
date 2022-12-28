@@ -37,13 +37,9 @@ class LoginViewModel extends ChangeNotifier {
         log(l.toString());
       },
       (r) {
-        log(r.toString());
+        _navigateToHome(context);
       },
     );
-  }
-
-  void navigateToRegister(BuildContext context) {
-    Navigator.pushNamed(context, RouteKeys.register);
   }
 
   void googleAuth(BuildContext context) async {
@@ -54,8 +50,18 @@ class LoginViewModel extends ChangeNotifier {
         log(l.toString());
       },
       (r) {
-        log(r.toString());
+        if (r == null) return;
+
+        _navigateToHome(context);
       },
     );
+  }
+
+  void navigateToRegister(BuildContext context) {
+    Navigator.pushNamed(context, RouteKeys.register);
+  }
+
+  void _navigateToHome(BuildContext context) {
+    Navigator.pushReplacementNamed(context, RouteKeys.home);
   }
 }

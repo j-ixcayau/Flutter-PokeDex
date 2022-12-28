@@ -8,6 +8,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 abstract class SocialAuthDataSoure {
   Future<SocialAuthResponse?> googleAuth();
   Future<SocialAuthResponse?> facebookAuth();
+  Future<void> logout();
 }
 
 class SocialAuthDataSoureImpl extends SocialAuthDataSoure {
@@ -47,5 +48,15 @@ class SocialAuthDataSoureImpl extends SocialAuthDataSoure {
     }
 
     throw Exception();
+  }
+
+  @override
+  Future<void> logout() async {
+    try {
+      await GoogleSignIn().signOut();
+      await GoogleSignIn().disconnect();
+    } catch (e) {
+      log(e.toString());
+    }
   }
 }

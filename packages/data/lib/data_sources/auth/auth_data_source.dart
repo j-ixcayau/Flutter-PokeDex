@@ -11,13 +11,16 @@ abstract class AuthDataSource {
   Future<LoginResponse> login(LoginRequest request);
   Future<RegisterResponse> register(RegisterRequest request);
   Future<bool> isUserLogged();
+  Future<void> logout();
 }
 
 class AuthDataSourceImpl extends AuthDataSource {
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+
   @override
   Future<LoginResponse> login(LoginRequest request) async {
     try {
-      final result = await FirebaseAuth.instance.signInWithEmailAndPassword(
+      final result = await _firebaseAuth.signInWithEmailAndPassword(
         email: request.email.trim(),
         password: request.password.trim(),
       );
@@ -37,7 +40,7 @@ class AuthDataSourceImpl extends AuthDataSource {
   @override
   Future<RegisterResponse> register(RegisterRequest request) async {
     try {
-      final result = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      final result = await _firebaseAuth.createUserWithEmailAndPassword(
         email: request.email.trim(),
         password: request.password.trim(),
       );
@@ -56,6 +59,15 @@ class AuthDataSourceImpl extends AuthDataSource {
 
   @override
   Future<bool> isUserLogged() async {
-    return FirebaseAuth.instance.currentUser != null;
+    return _firebaseAuth.currentUser != null;
+  }
+
+  @override
+  Future<void> logout() async {
+    try {
+      await _firebaseAuth.signOut();
+    } catch (e) {
+      log(e.toString());
+    }
   }
 }

@@ -23,8 +23,10 @@ class RegisterLayout extends StatelessWidget {
       child: AuthBody(
         actionTitle: '¿Ya tienes una cuenta?',
         actionButtonText: 'Inicia sesión',
-        onActionTap: () => context.read<RegisterViewModel>().returnToLogin(context),
-        onBackTap: () => context.read<RegisterViewModel>().returnToLogin(context),
+        onActionTap: () =>
+            context.read<RegisterViewModel>().returnToLogin(context),
+        onBackTap: () =>
+            context.read<RegisterViewModel>().returnToLogin(context),
         children: [
           const SizedBox(height: AppSpaces.l),
           const Label(
@@ -65,7 +67,8 @@ class RegisterLayout extends StatelessWidget {
               const SizedBox(width: AppSpaces.m),
               SocialButton(
                 assetPath: AssetsConstants.googleLogo,
-                onTap: () {},
+                onTap: () =>
+                    context.read<RegisterViewModel>().googleAuth(context),
               ),
             ],
           ),

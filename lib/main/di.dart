@@ -104,11 +104,15 @@ class AppDI {
     _getIt.registerFactory<RegisterViewModel>(
       () => RegisterViewModel(
         repository: _getIt(),
+        socialRepository: _getIt(),
       ),
     );
 
     _getIt.registerFactory<HomeViewModel>(
-      () => HomeViewModel(),
+      () => HomeViewModel(
+        authRepository: _getIt(),
+        socialRepository: _getIt(),
+      ),
     );
 
     _getIt.registerFactory<RegionsViewModel>(
@@ -116,7 +120,7 @@ class AppDI {
         repository: _getIt(),
       ),
     );
-    
+
     _getIt.registerFactory<PokemonsViewModel>(
       () => PokemonsViewModel(
         repository: _getIt(),

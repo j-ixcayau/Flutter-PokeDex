@@ -9,4 +9,5 @@ abstract class AuthRepository {
   Future<Either<Exception, LoginResponse>> login(LoginRequest request);
   Future<Either<Exception, RegisterResponse>> register(RegisterRequest request);
   Future<Either<Exception, bool>> isUserLogged();
+  Future<Either<Exception, void>> logout();
 }

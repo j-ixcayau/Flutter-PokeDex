@@ -35,4 +35,20 @@ class SocialAuthRepositoryImpl extends SocialAuthRepository {
       return Left(Exception());
     }
   }
+
+  @override
+  Future<Either<Exception, void>> logout() async {
+    try {
+      final result = await _dataSource.logout();
+      return Right(result);
+    } on Exception catch (e) {
+      log(e.toString());
+
+      return Left(e);
+    } catch (e) {
+      log(e.toString());
+
+      return Left(Exception());
+    }
+  }
 }
