@@ -59,11 +59,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "766516250186-ojkas5lika487m16gtgrk33rn2qclu4k.apps.googleusercontent.com",
+          "client_id": "766516250186-49c9graev08kul6m5e21hgotjjsmedst.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.pokedex.flutter.pokedex",
-            "certificate_hash": "cdcfaf3b6cf8b9a5a4d0dbe2ddff20754ab65fea"
+            "certificate_hash": "8682b3cb5e861ecb2308d9626894716015a11740"
           }
         },
         {
