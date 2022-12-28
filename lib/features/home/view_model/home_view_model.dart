@@ -5,4 +5,8 @@ class HomeViewModel extends ChangeNotifier {
   void navigateToRegion(BuildContext context) {
     Navigator.pushNamed(context, RouteKeys.regions);
   }
+
+  void navigateToPokemons(BuildContext context) {
+    Navigator.pushNamed(context, RouteKeys.pokemons);
+  }
 }

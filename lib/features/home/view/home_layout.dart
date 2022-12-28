@@ -24,7 +24,8 @@ class HomeLayout extends StatelessWidget {
             HomeCategoryCard(
               title: 'Pokemones',
               color: PokeColors.pokemonCard,
-              onTap: () {},
+              onTap: () =>
+                  context.read<HomeViewModel>().navigateToPokemons(context),
             )
           ],
         ),

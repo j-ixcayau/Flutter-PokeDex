@@ -17,7 +17,6 @@ class RegionItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 4.0,
-      margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       child: ListTile(
         title: Label(
           value: region.name.capitalized,

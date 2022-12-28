@@ -13,7 +13,7 @@ class RegionsViewModel extends ChangeNotifier {
 
   List<Region> regions = [];
 
-  void init() async {
+  void getRegions() async {
     final result = await _repository.getRegions();
 
     result.fold(

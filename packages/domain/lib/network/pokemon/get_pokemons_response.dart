@@ -6,4 +6,16 @@ class GetPokemonsResponse {
   });
 
   final List<Pokemon> results;
+
+  factory GetPokemonsResponse.fromJson(Map<String, dynamic> json) {
+    final results = (json['results'] as List)
+        .map(
+          (result) => Pokemon.fromJson(result),
+        )
+        .toList();
+
+    return GetPokemonsResponse(
+      results: results,
+    );
+  }
 }

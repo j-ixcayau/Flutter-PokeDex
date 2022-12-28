@@ -22,7 +22,7 @@ class _RegionsLayoutState extends State<RegionsLayout> {
 
     Future.delayed(
       Duration.zero,
-      context.read<RegionsViewModel>().init,
+      context.read<RegionsViewModel>().getRegions,
     );
   }
 
