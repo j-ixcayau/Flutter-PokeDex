@@ -1,6 +1,7 @@
 import 'package:domain/repositories/auth/auth_repository.dart';
 import 'package:domain/repositories/auth/social_auth_repository.dart';
 import 'package:flutter/material.dart';
+
 import 'package:pokedex/utils/routes/route_keys.dart';
 
 class HomeViewModel extends ChangeNotifier {

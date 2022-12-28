@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/features/home/view_model/home_view_model.dart';
-import 'package:pokedex/features/home/widgets/home_category_card.dart';
+import 'package:provider/provider.dart';
+
 import 'package:pokedex/utils/constants/app_colors.dart';
 import 'package:pokedex/widgets/base_body.dart';
-import 'package:provider/provider.dart';
+import 'package:pokedex/features/home/view_model/home_view_model.dart';
+import 'package:pokedex/features/home/widgets/home_category_card.dart';
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({super.key});

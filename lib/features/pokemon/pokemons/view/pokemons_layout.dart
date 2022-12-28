@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/features/pokemon/pokemons/view_model/pokemons_view_model.dart';
-import 'package:pokedex/features/pokemon/pokemons/widgets/pokemon_item.dart';
 import 'package:provider/provider.dart';
 
 import 'package:pokedex/utils/constants/app_spaces.dart';
 import 'package:pokedex/utils/enums/label_type.dart';
 import 'package:pokedex/widgets/base_body.dart';
 import 'package:pokedex/widgets/poke_label.dart';
+import 'package:pokedex/features/pokemon/pokemons/view_model/pokemons_view_model.dart';
+import 'package:pokedex/features/pokemon/pokemons/widgets/pokemon_item.dart';
 
 class PokemonsLayout extends StatefulWidget {
   const PokemonsLayout({super.key});

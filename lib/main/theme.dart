@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:pokedex/utils/constants/app_colors.dart';
 
 class AppTheme {
