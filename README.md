@@ -16,6 +16,14 @@ Para Android y iOS no se debe hacer ninguna configuración para compilar
 -   En android se puede utilizar un dispositivo físico o emulador, el app tiene una keystore configurada por lo que no hay problema con el auth de google. En la ruta '/apk/app-release.apk' se tiene un apk con la que se pueden hacer pruebas
 -   En iOS por el costo de licencias, únicamente se puede compilar con emuladores
 
+Debido a que el proyecto hace uso de modulos, para compilar se tiene que hacer un `flutter packages get` en las siguientes carpetas y orden
+
+-   /packages/domain
+-   /packages/data
+-   /
+
+Ya que cada uno contiene su propio pubspect.yaml, con esto se obtienen las dependencias de cada uno.
+
 ## Autenticación
 
 Métodos de inicio de sesión:
