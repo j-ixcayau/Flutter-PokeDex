@@ -38,6 +38,13 @@
             {
               "client_id": "766516250186-e8483b9b7iq6ejtgvfpe7767asovpru0.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "766516250186-n4de4p69m945gl7tegbgvkleme334phq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pokedex.flutter.pokedex"
+              }
             }
           ]
         }
@@ -51,6 +58,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "766516250186-ojkas5lika487m16gtgrk33rn2qclu4k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pokedex.flutter.pokedex",
+            "certificate_hash": "cdcfaf3b6cf8b9a5a4d0dbe2ddff20754ab65fea"
+          }
+        },
         {
           "client_id": "766516250186-e8483b9b7iq6ejtgvfpe7767asovpru0.apps.googleusercontent.com",
           "client_type": 3
@@ -67,6 +82,13 @@
             {
               "client_id": "766516250186-e8483b9b7iq6ejtgvfpe7767asovpru0.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "766516250186-n4de4p69m945gl7tegbgvkleme334phq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pokedex.flutter.pokedex"
+              }
             }
           ]
         }
