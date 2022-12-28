@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/features/auth/login/view_model/login_view_model.dart';
-import 'package:pokedex/features/auth/widgets/auth_body.dart';
-import 'package:pokedex/features/auth/widgets/social_button.dart';
+import 'package:provider/provider.dart';
+
 import 'package:pokedex/utils/constants/app_spaces.dart';
 import 'package:pokedex/utils/constants/assets_constants.dart';
 import 'package:pokedex/utils/enums/input_type.dart';
@@ -9,7 +8,9 @@ import 'package:pokedex/utils/enums/label_type.dart';
 import 'package:pokedex/widgets/poke_button.dart';
 import 'package:pokedex/widgets/poke_input.dart';
 import 'package:pokedex/widgets/poke_label.dart';
-import 'package:provider/provider.dart';
+import 'package:pokedex/features/auth/widgets/auth_body.dart';
+import 'package:pokedex/features/auth/widgets/social_button.dart';
+import 'package:pokedex/features/auth/login/view_model/login_view_model.dart';
 
 class LoginLayout extends StatelessWidget {
   const LoginLayout({super.key});
@@ -22,7 +23,8 @@ class LoginLayout extends StatelessWidget {
       child: AuthBody(
         actionTitle: '¿Aún no tienes una cuenta?',
         actionButtonText: 'Registrate',
-        onActionTap: () {},
+        onActionTap: () =>
+            context.read<LoginViewModel>().navigateToRegister(context),
         onBackTap: null,
         children: [
           const SizedBox(height: AppSpaces.l),
@@ -64,7 +66,7 @@ class LoginLayout extends StatelessWidget {
               const SizedBox(width: AppSpaces.m),
               SocialButton(
                 assetPath: AssetsConstants.googleLogo,
-                onTap: () {},
+                onTap: () => context.read<LoginViewModel>().googleAuth(context),
               ),
             ],
           ),

@@ -22,7 +22,7 @@ extension LabelTypeExt on LabelType {
       case LabelType.subtitle:
         return AppSpaces.l;
       case LabelType.normal:
-        return AppSpaces.s;
+        return AppSpaces.s2;
     }
   }
 }

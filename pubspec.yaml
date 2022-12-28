@@ -17,6 +17,13 @@ dependencies:
   provider: ^6.0.5
   lottie: ^2.1.0
   get_it: ^7.2.0
+  firebase_auth: ^4.2.3
+
+  data:
+    path: ./packages/data/
+  domain:
+    path: ./packages/domain/
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
   flutter_test:
@@ -27,8 +34,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/
     - assets/loader/
     - assets/auth/
 
