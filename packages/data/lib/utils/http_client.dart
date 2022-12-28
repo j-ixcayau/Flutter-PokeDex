@@ -20,9 +20,7 @@ abstract class HttpClient {
 }
 
 class HttpClientImpl implements HttpClient {
-  final http.Client _client;
-
-  HttpClientImpl(this._client);
+  final http.Client _client = http.Client();
 
   @override
   Future<http.Response> get(String url) async {

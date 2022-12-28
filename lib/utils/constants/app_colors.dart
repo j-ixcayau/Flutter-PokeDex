@@ -12,7 +12,7 @@ class PokeColors {
   static const error = Color(0xFFE53945);
 
   // Categories Color
-  static const teamCard = Color(0xFF5FB69B);
+  static const pokemonCard = Color(0xFF5FB69B);
   static const regionCard = Color(0xFFE67461);
   static const logOutCard = Color(0xFF619CF5);
 }
